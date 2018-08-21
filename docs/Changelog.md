@@ -1412,6 +1412,7 @@ This version of the operator has been available since version 1 of the default O
             [4.5, 5.9],
         ],
     ]
+  Note that for index specified by indices, if an out of bound index is encoutered, on CPU, an error is reported, on GPU, a default value 0 is set in the corresponding output.
 
 #### Version
 

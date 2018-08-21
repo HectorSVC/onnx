@@ -85,7 +85,7 @@ ONNX_OPERATOR_SET_SCHEMA(
         .Output(0, "reshaped", "Reshaped data.", "T")
         .TypeConstraint(
             "T",
-			OpSchema::all_tensor_types(),
+            OpSchema::all_tensor_types(),
             "Constrain input and output types to all tensor types.")
         .TypeAndShapeInferenceFunction([](InferenceContext& ctx) {
           // Type inference
@@ -647,6 +647,7 @@ Example 2:
           [4.5, 5.9],
       ],
   ]
+Note that for index specified by indices, if an out of bound index is encoutered, on CPU, an error is reported, on GPU, a default value 0 is set in the corresponding output.
 )DOC";
 
 ONNX_OPERATOR_SET_SCHEMA(
